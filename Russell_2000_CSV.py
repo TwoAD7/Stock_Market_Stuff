@@ -48,4 +48,4 @@ def grab_comp_info():
 grab_comp_info()
 df = pd.DataFrame({"Name":names,"Price":price,"P/E": pe_rat})
 print(df)
-df.to_csv("Russell_2000",sep=',',index=False)
+df.to_csv("Russell_2000.csv",sep=',',index=False)
