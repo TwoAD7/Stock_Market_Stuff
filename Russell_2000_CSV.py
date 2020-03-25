@@ -39,11 +39,11 @@ def grab_comp_info():
 		sleep(6)
 
 		tables = driver.find_elements_by_xpath("//table[@class='wsod_dataTable wsod_dataTableBig']")
-	for i in get_row_data(tables[2]):
-		names.append(str(i[0]))
-		price.append(str(i[1]))
-		pe_rat.append(str(i[4]))
-	driver.close()
+		for i in get_row_data(tables[2]):
+			names.append(str(i[0]))
+			price.append(str(i[1]))
+			pe_rat.append(str(i[4]))
+		driver.close()
 
 grab_comp_info()
 df = pd.DataFrame({"Name":names,"Price":price,"P/E": pe_rat})
